@@ -1,4 +1,4 @@
-module template
+module goraft
 
 go 1.24.4
 

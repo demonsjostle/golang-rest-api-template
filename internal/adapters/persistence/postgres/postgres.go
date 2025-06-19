@@ -4,8 +4,8 @@ import (
 	"context"
 
 	_ "github.com/lib/pq"
-	"template/ent"
-	"template/internal/core/port/outbound"
+	"goraft/ent"
+	"goraft/internal/core/port/outbound"
 )
 
 type PostgresClient struct {

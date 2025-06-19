@@ -1,4 +1,4 @@
-# golang-rest-api-template
+# Goraft
 Golang RestAPI Template
 ![Goraft Logo](.github/assets/circle_logo_small.png)
 
