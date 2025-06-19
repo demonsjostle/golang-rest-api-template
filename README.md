@@ -1,7 +1,19 @@
 # golang-rest-api-template
 Golang RestAPI Template
 
-A Go-based backend rest api service template.
+A Go-based backend rest api service + Hexagonal template.
+
+
+## 📦 Tech Stack
+
+| Component         | Technology                |
+|------------------|---------------------------|
+| Language         | [Go](https://golang.org/) |
+| API              | RestAPI |
+| Web Framework    | [Echo](https://echo.labstack.com/) |
+| ORM              | [Ent](https://entgo.io/) |
+| Database         | PostgreSQL                |
+| Architecture     | Hexagonal (Ports & Adapters) |
 
 ## Project Structure
 
