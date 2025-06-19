@@ -1,6 +1,6 @@
 # golang-rest-api-template
 Golang RestAPI Template
-![Goraft Logo](.github/assets/logo.png)
+![Goraft Logo](.github/assets/circle_logo.png)
 
 A Go-based backend rest api service + Hexagonal template.
 
