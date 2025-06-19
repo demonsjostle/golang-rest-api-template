@@ -1,6 +1,5 @@
 # Environment variables
 .env
-.env.*
 config/config.yaml
 
 # ... existing code ... 
