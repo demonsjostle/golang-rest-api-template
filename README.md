@@ -85,10 +85,11 @@ A Go-based backend rest api service + Hexagonal template.
 ## Getting Started
 
 ### Initial project 
+To initial new name for your project
     
-    ```bash 
-    go run ./cmd/cli/init.go 
-    ```
+   ```bash
+   go run ./cmd/cli/init.go
+   ```
 
 ### Set up environment variables:
 
