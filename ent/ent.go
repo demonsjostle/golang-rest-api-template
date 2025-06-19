@@ -6,9 +6,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"goraft/ent/user"
 	"reflect"
 	"sync"
-	"template/ent/user"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"

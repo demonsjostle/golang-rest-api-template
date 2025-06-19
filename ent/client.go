@@ -9,9 +9,9 @@ import (
 	"log"
 	"reflect"
 
-	"template/ent/migrate"
+	"goraft/ent/migrate"
 
-	"template/ent/user"
+	"goraft/ent/user"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"

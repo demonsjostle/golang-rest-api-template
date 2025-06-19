@@ -3,7 +3,7 @@
 package user
 
 import (
-	"template/ent/predicate"
+	"goraft/ent/predicate"
 
 	"entgo.io/ent/dialect/sql"
 )

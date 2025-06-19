@@ -4,8 +4,8 @@ package ent
 
 import (
 	"context"
-	"template/ent/predicate"
-	"template/ent/user"
+	"goraft/ent/predicate"
+	"goraft/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

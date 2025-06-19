@@ -5,7 +5,7 @@ package ent
 import (
 	"context"
 	"fmt"
-	"template/ent/user"
+	"goraft/ent/user"
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"

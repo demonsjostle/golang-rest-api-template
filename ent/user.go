@@ -4,8 +4,8 @@ package ent
 
 import (
 	"fmt"
+	"goraft/ent/user"
 	"strings"
-	"template/ent/user"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"

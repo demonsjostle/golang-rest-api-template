@@ -5,9 +5,9 @@ package ent
 import (
 	"context"
 	"fmt"
+	"goraft/ent/predicate"
+	"goraft/ent/user"
 	"math"
-	"template/ent/predicate"
-	"template/ent/user"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"

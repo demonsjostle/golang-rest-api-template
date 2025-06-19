@@ -5,11 +5,11 @@ package enttest
 import (
 	"context"
 
-	"template/ent"
+	"goraft/ent"
 	// required by schema hooks.
-	_ "template/ent/runtime"
+	_ "goraft/ent/runtime"
 
-	"template/ent/migrate"
+	"goraft/ent/migrate"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

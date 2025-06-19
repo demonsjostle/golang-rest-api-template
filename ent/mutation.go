@@ -6,8 +6,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"goraft/ent/predicate"
 	"sync"
-	"template/ent/predicate"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"

@@ -5,7 +5,7 @@ package hook
 import (
 	"context"
 	"fmt"
-	"template/ent"
+	"goraft/ent"
 )
 
 // The UserFunc type is an adapter to allow the use of ordinary
