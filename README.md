@@ -7,42 +7,60 @@ A Go-based backend rest api service template.
 
 ```
 .
-├── cmd/                             # Entry points (main.go ของแต่ละ service/cli)
-├── config/                          # Config loader (YAML/ENV)
-├── pkg/                             # Public libraries (external consumers)
+├── cmd/                             # Entry points ของแต่ละไบนารี (main.go)
+│   ├── server/
+│   │   └── main.go                  # HTTP server bootstrap
+│   ├── worker/
+│   │   └── main.go                  # Background worker entry point
+│   └── cli/
+│       └── main.go                  # CLI tool commands
+│
+├── pkg/                             # Public libraries ที่เปิดให้ใช้ข้ามโปรเจกต์ 
+│
 ├── internal/
-│   ├── core/
+│   ├── core/                        # Business Core ตาม Hexagonal
 │   │   ├── domain/                  # Entities & Value Objects
 │   │   ├── port/
-│   │   │   ├── inbound/             # Inbound Ports Interfaces
-│   │   │   └── outbound/            # Outbound Ports Interfaces
-│   │   └── service/                 # Use-Case Services (Primary Adapters)
-│   ├── handler/                     # Inbound Adapters (HTTP, gRPC, CLI)
-│   │   ├── http/
-│   │   └── kafka/
-│   ├── repository/                  # Outbound Adapters (DB, Cache)
-│   │   ├── postgres/
-│   │   ├── redis/
-│   │   └── mongo/
+│   │   │   ├── inbound/             # Inbound Ports Interfaces (e.g. Handler interfaces)
+│   │   │   └── outbound/            # Outbound Ports Interfaces (e.g. Repository interfaces)
+│   │   └── service/                 # Application Services (Use Cases)
+│   │
+│   ├── adapters/                    # Secondary Adapters (implement Ports)
+│   │   ├── persistence/             # Persistence Adapters (DB, Cache)
+│   │   │   ├── postgres/            # PostgreSQL (Ent)
+│   │   │   │   └── postgres.go
+│   │   │   ├── redis/               # Redis adapter
+│   │   │   └── mongo/               # MongoDB adapter
+│   │   │
+│   │   └── config/                  # Config Loader Adapter (Viper, Env)
+│   │       ├── config.dev.yml
+│   │       └── config.go
+│   │
+│   ├── handler/                     # Inbound Adapters (HTTP, Kafka, CLI)
+│   │   ├── http/                    # Echo / Gin / Chi routers & controllers
+│   │   │   └── router.go            # RegisterRoutes, Middlewares
+│   │   └── kafka/                   # Kafka consumers / producers
+│   │
 │   └── util/                        # Utility packages (logging, middleware)
-├── protocol/                        # API definitions (GraphQL, gRPC, OpenAPI, JSON Schema)
-│   ├── graphql/                     # GraphQL schema & codegen config
+│
+├── protocol/                        # API contracts / specs
+│   ├── graphql/                     # GraphQL schema + codegen config
 │   │   ├── schema.graphql
 │   │   └── gqlgen.yml
-│   ├── proto/                       # gRPC / Protobuf IDL
+│   ├── proto/                       # gRPC / Protobuf definitions
 │   │   ├── user.proto
 │   │   └── course.proto
-│   ├── openapi/                     # OpenAPI/Swagger specs
+│   ├── openapi/                     # OpenAPI / Swagger specs
 │   │   ├── openapi.yaml
 │   │   └── swagger-config.json
-│   └── jsonschema/                  # JSON Schema definitions (ถ้ามี)
+│   └── jsonschema/                  # JSON Schema definitions (optional)
 │       ├── user.json
 │       └── course.json
-├── Dockerfile
-├── docker-compose.yml
-├── go.mod
-├── go.sum
-└── init.sql
+│
+├── Dockerfile                       # Container build definition
+├── docker-compose.yml               # Local development services
+├── go.mod                           # Go module definition
+└── go.sum                           # Go module checksums
 ```
 
 ## Prerequisites
