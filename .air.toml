@@ -7,7 +7,7 @@ tmp_dir = "tmp"
 [build]
   # คำสั่งที่ใช้ build/rerun
   # cmd = "go run cmd/server/main.go"
-  cmd = "pkill cpru-api; go build -o ./tmp/ ./cmd/server && ./tmp/"
+  cmd = "pkill goraft; go build -o ./tmp/goraft ./cmd/server && ./tmp/goraft"
 
 
   # include file extension ที่จะ watch

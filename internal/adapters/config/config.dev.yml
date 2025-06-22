@@ -3,7 +3,9 @@ server:
   host: localhost
 
 database:
-  host: localhost
-  port: 5432
-  dbname: database
-  sslmode: disable
+  host:     ""     # จะถูก override จาก env
+  port:     0      # same
+  user:     ""     # same
+  password: ""     # same
+  dbname:   ""     # same
+  sslmode:  ""     # same
